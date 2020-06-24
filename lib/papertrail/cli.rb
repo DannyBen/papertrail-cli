@@ -169,9 +169,9 @@ module Papertrail
 
       idx = attribs.hash % 5
       color = COLORS[idx]
-      pre  = "#{event.received_at.strftime('%b %d %X')} #{event.data['hostname']} #{event.data['program']}:"
-      post = " #{event.data['message']}"
-      pre.ansi(color) + post
+      pre  = "#{event.received_at.strftime('%b %d %X')} #{event.data['hostname']} #{event.data['program']}"
+      post = "#{event.data['message']}"
+      "\n#{pre.ansi(color)}\n#{post}"
     end
 
     def display_colors?

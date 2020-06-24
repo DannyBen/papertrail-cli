@@ -13,7 +13,7 @@ module Papertrail
     end
 
     def to_s
-      "#{received_at.strftime('%b %d %X')} #{data['hostname']} #{data['program']}: #{data['message']}"
+      "\n#{received_at.strftime('%b %d %X')} #{data['hostname']} #{data['program']}\n#{data['message']}"
     end
   end
 end
