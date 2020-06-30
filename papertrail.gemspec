@@ -11,7 +11,6 @@ Gem::Specification.new do |s|
   s.name              = 'papertrail'
   s.version           = '0.11.0'
   s.date              = '2018-05-16'
-  s.rubyforge_project = 'papertrail'
 
   ## Make sure your summary is short. The description may be as long
   ## as you like.
@@ -36,7 +35,6 @@ Gem::Specification.new do |s|
 
   ## If your gem includes any executables, list them here.
   s.executables = ["papertrail", "papertrail-add-system", "papertrail-remove-system", "papertrail-add-group", "papertrail-join-group", "papertrail-leave-group"]
-  s.default_executable = 'papertrail'
 
   ## Specify any RDoc options here. You'll want to add your README and
   ## LICENSE files to the extra_rdoc_files list.
@@ -52,8 +50,8 @@ Gem::Specification.new do |s|
   ## List your development dependencies here. Development dependencies are
   ## those that are only needed during development
   s.add_development_dependency('rake', '~> 10.4')
-  s.add_development_dependency('minitest')
-  s.add_development_dependency('mocha')
+  s.add_development_dependency('minitest', '~> 5.14')
+  s.add_development_dependency('mocha', '~> 1.11')
 
   if RUBY_VERSION > '1.9'
     s.add_development_dependency('addressable',  '~> 2.4.0')

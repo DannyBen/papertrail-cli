@@ -44,16 +44,16 @@ module Papertrail
         opts.on("-f", "--follow", "Continue running and printing new events (off)") do |v|
           options[:follow] = true
         end
-        opts.on("--min-time MIN", "Earliest time to search from") do |v|
+        opts.on("-m", "--min-time MIN", "Earliest time to search from") do |v|
           options[:min_time] = v
         end
-        opts.on("--max-time MAX", "Latest time to search from") do |v|
+        opts.on("-x", "--max-time MAX", "Latest time to search from") do |v|
           options[:max_time] = v
         end
         opts.on("-d", "--delay SECONDS", "Delay between refresh (2)") do |v|
           options[:delay] = v.to_i
         end
-        opts.on("-c", "--configfile PATH", "Path to config (~/.papertrail.yml)") do |v|
+        opts.on("--configfile PATH", "Path to config (~/.papertrail.yml)") do |v|
           options[:configfile] = File.expand_path(v)
         end
         opts.on("-g", "--group GROUP", "Group to search") do |v|
@@ -73,7 +73,7 @@ module Papertrail
                 "Attribute(s) to colorize based on (program)") do |v|
           options[:color] = v
         end
-        opts.on("--force-color", "Force use of ANSI color characters even on non-tty outputs (off)") do |v|
+        opts.on("-c", "--force-color", "Force use of ANSI color characters even on non-tty outputs (off)") do |v|
           options[:force_color] = true
         end
         opts.on("-V", "--version", "Display the version and exit") do |v|
